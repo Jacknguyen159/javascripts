@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>input</label>
+    <input type="text" id="num" onkeyup="thungay()">
+    <p><span id="demo"></span></p>
+    <script>
+        function thungay(){
+            var a = parseInt(document.getElementById('num').value);
+            var lenh;
+            if (a==1){
+                lenh = "hom nay la chu nhat";
+            }else if(a==2){
+                lenh = "hom nay la thu 2";
+            }else if(a==3){
+                lenh = "hom nay la thu 3";
+            }else if(a==4){
+                lenh = "hom nay la thu 4";
+            }else if(a==5){
+                lenh = "hom nay la thu 5";
+            }else if(a==6){
+                lenh = "hom nay la thu 6";
+            }else if(a==7){
+                lenh = "hom nay la thu 7";
+            }else{
+                lenh = "vui long nhap tu 1 den 7"
+            }
+            document.getElementById('demo').innerHTML =lenh;
+        }
+    </script>
+</body>
+</html>
