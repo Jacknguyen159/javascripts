@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,   td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+    <form action="" name="frm">
+        <p>
+            <label for="">
+                Name
+                <input type="text" name="pname" id="pname">
+            </label>
+            <label for="">
+                Quantity
+                <input type="text" name="qty" id="qty">
+            </label>
+        </p>
+        <p>
+            <label for="">
+                Price
+                <input type="text" name="up" id="up">
+            </label>
+            <label for="">
+                Discount
+                <input type="text" name="discount" id="discount">
+            </label>
+        </p>
+        <button type="button" onclick="sell()"> Sell</button>
+        <button type="button" onclick="functionCancle()">Cancel</button>
+
+    
+</form>
+    <table  id="tbl">
+        <tr>
+            <th>id</th>
+            <th>Product name</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+            <th>Discount</th>
+            <th>Subtotal</th>
+        </tr>
+    <script type="text/javascript">
+        var id=0;
+      function sell(){
+          id++;
+          var pname=frm.pname.value;
+          var qty=frm.qty.value;
+          var price=frm.up.value;
+          var dic=frm.discount.value;
+          var sub=qty*price*(1-dic/100);
+          var row="<tr>";
+          row+="<td>" + id + "</td>";
+          row+="<td>" + pname + "</td>";
+          row+="<td>" + qty + "</td>";
+          row+="<td>$" + price + "</td>";
+          row+="<td>" + dic + "</td>";
+          row+="<td>$" + sub + "</td>";
+          row+="</tr>";
+          document.getElementById("tbl").innerHTML += row;        
+          console.log(row);
+      }
+      function functionCancle(){
+            document.getElementById("pname").value="";
+            document.getElementById("qty").value="";
+            document.getElementById("price").value="";
+            document.getElementById("dc").value="";
+        }
+  </script>
+    </table>
+   
+</body>
+</html>
