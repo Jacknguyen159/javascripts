@@ -69,10 +69,9 @@ var women = [
 
 function listtable(){
     var demo='';
-    for(i in man ){
-        var n  =i;
+    for(var i in man ){
         demo += "<tr>";
-        demo += "<td>"+(n)+"</td>"
+        demo += "<td>"+man[i].id+"</td>"
         demo += "<td>"+man[i].name+"</td>"
         demo += "<td>"+man[i].code+"</td>"
         demo += "<td><img src= "+man[i].image+"></td>"
@@ -82,10 +81,10 @@ function listtable(){
         document.getElementById("tbl").innerHTML = demo;
     }
     var demo1='';
-    for(i in women ){
+    for(var i in women ){
         var n  =i;
         demo1 += "<tr>";
-        demo1 += "<td>"+(n)+"</td>"
+        demo1 += "<td>"+women[i].id+"</td>"
         demo1 += "<td>"+women[i].name+"</td>"
         demo1 += "<td>"+women[i].code+"</td>"
         demo1 += "<td><img src= "+women[i].image+"></td>"
