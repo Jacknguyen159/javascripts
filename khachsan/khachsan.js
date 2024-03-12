@@ -9,7 +9,6 @@ var data = [
     {
         id : 2,
         name : "A42",
-        code : "VN0006",
         price : 249000,
         image:"https://bizweb.dktcdn.net/100/287/440/products/ao-khoac-nam-kaki-dep-local-brand-2.jpg?v=1628678692670",
         rate :4.5,
@@ -17,7 +16,6 @@ var data = [
     {
         id : 3,
         name : "A43",
-        code : "US0001",
         price : 160000,
         image:"https://product.hstatic.net/200000255805/product/tai_xuong_-_2023-05-30t164439.314_03fd5eafdd774a7d8dac28da18530830_master.jpg",
         rate : 5.0
@@ -26,9 +24,11 @@ var data = [
 
 function show(){
     var demo='';
+    var d = 0;
     for(let i = 0; i<data.length;i++){
+      d++;
         demo += "<tr>";
-        demo += "<td>"+data[i].id+"</td>"
+        demo += "<td>"+(d)+"</td>"
         demo += "<td>"+data[i].name+"</td>"
         demo += "<td>"+data[i].price+"</td>"
         demo += "<td><img src= "+data[i].image+"></td>"
@@ -42,7 +42,6 @@ function show(){
 }
 function create(){
     var a = { 
-      id :document.getElementById("id").value,
       name :document.getElementById("name").value,
       price :document.getElementById("price").value,
       image:document.getElementById("image").value,
@@ -59,7 +58,7 @@ function create(){
       document.getElementById("rate").value = "";
 }
 function editroom(index) {
-    document.getElementById("editid").value = data[index].id;
+    document.getElementById("editid").value = index;
     document.getElementById("editname").value = data[index].name;
     document.getElementById("editprice").value = data[index].price;
     document.getElementById("editimage").value = data[index].image;
@@ -67,15 +66,20 @@ function editroom(index) {
 
     document.getElementById("editForm").style.display = "block";
   }
-  function updateroom() {
-    var newid = document.getElementById("editid").value;
-    var newname = document.getElementById("editname").value;
-    var newimage = document.getElementById("editprice").value;
-    var newprice = document.getElementById("editimage").value;
-    var newrate = document.getElementById("editrate").value;
-    
-    document.getElementById("editForm").style.display = "none";
 
+  function updateroom() {
+    var indexupdate = parseInt(document.getElementById("editid").value);
+    var newname = document.getElementById("editname").value;
+    var newprice = document.getElementById("editprice").value;
+    var newimage = document.getElementById("editimage").value;
+    var newrate = document.getElementById("editrate").value;
+        data[indexupdate].name = newname;
+        data[indexupdate].price = newprice;
+        data[indexupdate].image = newimage;
+        data[indexupdate].rate = newrate;
+
+    document.getElementById("editForm").style.display = "none";
+    console.log(data);
     show(data);
   }
 function deleteroom(index) {
