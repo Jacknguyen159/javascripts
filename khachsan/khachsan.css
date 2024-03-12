@@ -1,0 +1,39 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .row{
+    display: flex;
+}
+
+a{
+    background-color: rgb(110, 255, 110);
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+h5{
+    font-size: 20px;
+}
+p{
+    font-size: 20px;
+}
+img{
+    width: 100px;
+}
+.btn{
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
