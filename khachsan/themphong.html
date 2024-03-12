@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt phòng khách sạn</title>
+    <link rel="stylesheet" href="/khachsan/khachsan.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="date"], select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Đặt phòng khách sạn</h1>
+    <form action="#" method="post">
+        <label for="id">Mã phòng:</label>
+        <input type="text" id="id" name="id" required>
+        
+        <label for="name">Tên phòng:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="price">Giá phòng:</label>
+        <input type="text" id="price" name="price" required>
+        
+        <label for="image">Hình ảnh:</label>
+        <input type="text" id="image" name="image" required>
+        
+        <label for="rate">Rate:</label>
+        <input type="text" id="rate" name="rate" required>
+        
+        <button type="button" onclick="create()">create</button>
+        <button type="button" onclick="show()">show</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ma phong</th>
+                <th>ten phong</th>
+                <th>gia</th>
+                <th>hinh anh</th>
+                <th>rate</th>
+                <th colspan="2">chuc nang</th>
+            </tr>
+        </thead>
+        <tbody id="tbl"></tbody>
+    </table> 
+    <div id="editForm" style="display: none">
+        <h2>Edit Product</h2>
+        <input type="text" id="editid" placeholder="Product Name" />
+        <input type="text" id="editname" placeholder="Product Name" />
+        <input type="text" id="editprice" placeholder="Price" />
+        <input type="text" id="editimage" placeholder="Image URL" />
+        <input type="text" id="editrate" placeholder="Discount" />
+        <input type="button" value="Update Product" onclick="updateroom()" />
+      </div>
+</body>
+<script src="/khachsan/khachsan.js"></script>
+</html>
