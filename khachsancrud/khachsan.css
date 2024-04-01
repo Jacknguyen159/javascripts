@@ -1,0 +1,84 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .row{
+    display: flex;
+}
+
+a{
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+h5{
+    font-size: 20px;
+}
+h4{
+  background-color: #27e900;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+p{
+    font-size: 20px;
+}
+
+.btn{
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+input[type="text"], input[type="date"], select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #23a509;
+}
+header{
+ display: flex;
+ position: relative;
+}
+header a{
+  position: absolute;
+  right: 1px;
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+header a:hover{
+  background-color: #d4d4d4;
+}
