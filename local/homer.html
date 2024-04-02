@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./khachsanr.css">
+    <title>Document</title>
+</head>
+<style>
+    .row{
+        display: flex;
+        padding: 20px;
+    }
+    .card{
+        border: 1px solid black;
+    }
+    h5{
+        font-size: 20px;
+    }
+    p{
+        font-size: 20px;
+    }
+    img{
+        width: 300px;
+    }
+    .btn{
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(40, 60, 243);
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+</style>
+<body onload="productlists()">
+    <header class="main">
+        <h1>Khách sạn</h1>
+        <a href="./themphongr.html" >Tạo phòng</a>
+    </header>
+    <div class="container-fluid" style="margin-top: 20px;">
+        <div class="row" id="room">
+        </div>
+    </div>   
+
+</body>
+<script src="./khachsanr.js"></script>
+</html>
